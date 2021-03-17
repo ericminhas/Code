@@ -1,0 +1,46 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Exercise</title>
+</head>
+<body>
+   <h1>Hello World from HTML</h1>
+   <br>
+   <p id="text">Initial Text</p>
+
+
+
+   <input type="text" id="input" >
+   <br>
+   <button type="button" id="btn" onclick="onButtonClicked()">Push Me!</button>
+   
+   <script>
+   console.log("Hello World from Inline HTML")
+   </script>
+   <script src="basic.js">
+   </script>
+   
+   <script>
+       function onButtonClicked () {
+           console.log ("I'm in the click event Button");
+           document.getElementById("btn").addEventListener("click", console.log(document.getElementById("input").value))
+           let number = 0;
+           number = parseInt (document.getElementById("input").value);
+           number2 = number + 1;
+           console.log (number2);
+
+        if (number <= 10 ) {
+            console.log ("small")
+        } else if(number <=19 ) {
+            console.log ("med")
+        } else {
+            console.log ("large")
+        };
+       }
+ 
+   </script>
+
+</body>
+</html>
